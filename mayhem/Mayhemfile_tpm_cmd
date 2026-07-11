@@ -1,0 +1,9 @@
+project: ms-tpm-20-ref
+target: tpm_cmd
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/tpm_cmd/testsuite
+cmds:
+  - cmd: /mayhem/tpm_cmd
+    libfuzzer: true
+    dictionary: /mayhem/mayhem/tpm_cmd.dict
